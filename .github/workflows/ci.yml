@@ -21,7 +21,6 @@ jobs:
 
   # TODO: black-ify
   lint:
-    name: Lint
     runs-on: ubuntu-latest
     steps:
       - name: Set up Python 3.7
