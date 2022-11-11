@@ -1,13 +1,11 @@
+import json
 import os
-import requests  # noqa We are just importing this to prove the dependency installed correctly
+import sys
 
 
 def main():
-    my_input = os.environ["INPUT_MYINPUT"]
-
-    my_output = f"Hello {my_input}"
-
-    print(f"::set-output name=myOutput::{my_output}")
+    results = json.loads(os.environ["INPUT_RESULTS"])
+    sys.exit(any(x != "success" for x in results))
 
 
 if __name__ == "__main__":
