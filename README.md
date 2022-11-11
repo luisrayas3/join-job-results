@@ -25,5 +25,5 @@ jobs:
     - name: All required checks succeeded
       uses: luisrayas3/join-job-results@master
       with:
-        results: ${{ needs.*.result }}
+        results: ${{ toJson(needs.*.result) }}
 ```
