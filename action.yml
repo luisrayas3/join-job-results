@@ -3,7 +3,7 @@ description: "Returns success if its input is all 'success'"
 author: "Luis Rayas"
 inputs:
   results:
-    description: "JSON-ified list of dependent results, e.g. ${{ toJson(needs.*.result) }}"
+    description: "JSON-ified list of dependent results, e.g. \${{ toJson(needs.*.result) }}"
     required: true
 runs:
   using: "docker"
