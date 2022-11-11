@@ -1,0 +1,11 @@
+name: CI test
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Self test
+        uses: luisrayas3/join-job-results@master
+        with:
+          results: '["success", "success"]'
+      # TODO: Test a non-success case
