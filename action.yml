@@ -1,13 +1,10 @@
-name: "Python Container Action Template"
-description: "Get started with Python Container actions"
-author: "Jacob Tomlinson"
+name: "Join job results"
+description: "Returns success if its input is all 'success'"
+author: "Luis Rayas"
 inputs:
-  myInput:
-    description: "Input to use"
-    default: "world"
-outputs:
-  myOutput:
-    description: "Output from the action"
+  results:
+    description: "JSON-ified list of dependent results, e.g. ${{ toJson(needs.*.result) }}"
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
