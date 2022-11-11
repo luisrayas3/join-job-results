@@ -19,6 +19,7 @@ jobs:
       - run: execute test2
   required-checks:
     needs: [test-1, test-2]
+    if: always()
     runs-on: ubuntu-latest
     steps:
     - name: All required checks succeeded
